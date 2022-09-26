@@ -1,0 +1,90 @@
+*********************************************
+              Admin tasks - II
+*********************************************
+
+
+
+-----**** Creating a data pipeline from s3 to hdfs and vice versa ****-----
+
+nano core-site.xml
+
+
+<property>
+  <name>fs.s3a.access.key</name>
+  <description>AWS access key ID used by S3A file system.</description>
+  <value>AKIAJ5IOWRHVI24JPJPQ</value> 
+</property>
+
+<property>
+  <name>fs.s3a.secret.key</name>
+  <description>AWS secret key used by S3A file system.</description>
+  <value>OjC8QsKDYWE6HD5WNOykgwaSplpNzJUCB57R2ZZM</value>
+</property>
+
+
+
+nano hadoop-env.sh
+
+export HADOOP_CLASSPATH=$HADOOP_CLASSPATH:$HADOOP_HOME/share/hadoop/tools/lib/*
+
+d
+hadoop fs -cp s3a://<bucket-name>/<file-name> hdfs:///user/hduser/
+
+hdfs dfs -cp s3a://<bucket-name>/<file-name> /user/hduser/
+
+
+
+-----**** Hadoop Archivals ****-----
+
+hadoop archive -archiveName xyz.har -p /user/ubuntu abcd hadoop-2.8.2.tar.gz /user/ubuntu
+
+hdfs dfs -ls
+
+hdfs dfs -ls -R xyz.har
+
+hdfs dfs -ls -R har:///user/ubuntu/xyz.har
+
+
+hdfs dfs -mkdir /user/ubuntu/unarch
+
+hdfs dfs -cp har:///user/ubuntu/xyz.har/abcd hdfs:/user/ubuntu/unarch
+
+hdfs dfs -ls -R /user/ubuntu/unarch
+
+
+-----**** Trash configuration ****-----
+
+nano core-site.xml
+
+<property>
+<name>fs.trash.interval</name>
+<value>30</value>
+<description>Number of minutes between trash checkpoints. If zero, the trash feature is disabled</description>
+</property>
+<property>
+<name>fs.trash.checkpoint.interval</name>
+<value>15</value>
+</property>
+
+
+hdfs dfs -rm <file>
+
+hdfs dfs -ls -R <path>
+
+## To permanently delete without going to trash
+ hdfs dfs -rm -skipTrash <path-to-file>
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+  
+hadoop version
+
+hdfs dfs -du hdfs:/  -------------disk usage
+
+hdfs dfs -count hdfs:/ --------- file count
+
+
+
+
+
