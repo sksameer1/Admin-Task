@@ -93,8 +93,8 @@ hdfs dfsadmin -clrQuota /user/ubuntu
 hdfs dfsadmin -clrSpaceQuota /user/ubuntu
 
 hdfs dfs -count -q /path/to/directory
-quota  rem_quota  space_quota  rem_space_quota  dir_count  file_count  size  file
- none     inf        54975	    56897           3           8     786955 /u/ 
+quota  remaining_quota  space_quota  rem_space_quota  dir_count  file_count  size  file
+ none     inf              54975	  56897           3           8     786955 /u/ 
 
 
 -----*** Namenode metadata backup ****-----
