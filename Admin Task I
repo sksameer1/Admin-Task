@@ -137,8 +137,26 @@ hdfs fsck /
 -move					Move corrupted files to /lost+found.
 
 
-
-
+------------------------------------------------------------------------------------------------------------------------------------
+ <path>  start checking from this path
+        -move   move corrupted files to /lost+found
+        -delete delete corrupted files
+        -files  print out files being checked
+        -openforwrite   print out files opened for write
+        -includeSnapshots       include snapshot data if the given path indicates a snapshottable directory or there are snapshottable directories under it
+        -list-corruptfileblocks print out list of missing blocks and files they belong to
+        -files -blocks  print out block report
+        -files -blocks -locations       print out locations for every block
+        -files -blocks -racks   print out network topology for data-node locations
+        -files -blocks -replicaDetails  print out each replica details
+        -files -blocks -upgradedomains  print out upgrade domains for every block
+        -storagepolicies        print out storage policy summary for the blocks
+        -maintenance    print out maintenance state node details
+        -showprogress   Deprecated. Progress is now shown by default
+        -blockId        print out which file this blockId belongs to, locations (nodes, racks) of this block, and other diagnostics info (under replicated, corrupted or not, etc)
+        -replicate initiate replication work to make mis-replicated
+ blocks satisfy block placement policy
+-------------------------------------------------------------------------------------------------------------------------------------
 
 -----**** Changing the block size ****-----
 
