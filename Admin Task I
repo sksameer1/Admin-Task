@@ -179,7 +179,7 @@ hdfs dfs -setrep -w 4 <file-name>
 ## Submit inbuild hadoop jobs (Open 4 terminals and submit same job at a time)
 
 
-yarn jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.4.jar pi  4 10000
+yarn jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-3.3.4.jar pi  4 10000
 
 yarn application -list
 
