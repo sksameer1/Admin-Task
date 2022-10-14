@@ -77,6 +77,8 @@ hdfs dfs -chown hduser abcd
 
 hdfs dfs -chmod 700 abcd
 
+hdfs dfs -chown sameer:hadoop abcd
+
 hdfs dfs -ls -R
 
 
