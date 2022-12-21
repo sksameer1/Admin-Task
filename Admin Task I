@@ -85,9 +85,9 @@ hdfs dfs -ls -R
 
 -----**** Configuring the HDFS quota ****-----
 
-hdfs dfsadmin -setQuota 20 /user/ubuntu
+hdfs dfsadmin -setQuota 20 /user/ubuntu        -- Name Quota
 
-hdfs dfsadmin -setSpaceQuota 	
+hdfs dfsadmin -setSpaceQuota 	               -- Space Quota
 /user/ubuntu
 
 hdfs dfsadmin -clrQuota /user/ubuntu
