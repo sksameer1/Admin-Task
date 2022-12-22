@@ -187,6 +187,8 @@ yarn application -list
 
 yarn application -list -appStates ALL
 
+ states: [NEW, NEW_SAVING, SUBMITTED, ACCEPTED, RUNNING, FINISHED, FAILED, KILLED]
+
 ##To get application ID use 
 
 yarn application -list
