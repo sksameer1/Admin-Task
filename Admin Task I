@@ -199,8 +199,8 @@ yarn application -status application_1459542433815_0002
 
 mapred job -set-priority pplication_1459542433815_0002 <priority>
 
---> VERY_HIGH, HIGH, NORMAL, LOW, VERY_LOW
-        2        1     0      -1     -2
+-->  VERY_HIGH   HIGH   NORMAL    LOW   VERY_LOW  DEFAULT
+        2         1       0       -1      -2
 ## Kill an application
 
 yarn application -kill application_1459542433815_0002
