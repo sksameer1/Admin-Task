@@ -16,13 +16,13 @@ nano core-site.xml
 <property>
   <name>fs.s3a.access.key</name>
   <description>AWS access key ID used by S3A file system.</description>
-  <value>AKIAQAR35USIDWZIOGTH</value> 
+  <value>AKIAQAR35USIDWZIGTH</value> 
 </property>
 
 <property>
   <name>fs.s3a.secret.key</name>
   <description>AWS secret key used by S3A file system.</description>
-  <value>lZZ6KUs5obAqY2xtL2ndJNXZ9AfVdf4nyYmmGPzX</value>
+  <value>lZZ6KUs5obAqY2xt2ndJNXZ9AfVdf4nyYmmGPzX</value>
 </property>
 
 <property>
