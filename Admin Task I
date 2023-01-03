@@ -128,7 +128,9 @@ hdfs dfsadmin -safemode leave
 
 hdfs fsck <path>
 hdfs fsck /
+hdfs fsck /filename.tar.gz -files -blocks -locations
 
+(find / -name “*block name*”)
 ## Options for fsck. To be given after path
 -delete					Delete corrupted files.
 -files					Print out files being checked.
